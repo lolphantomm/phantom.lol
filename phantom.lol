@@ -19,9 +19,8 @@ local Groupbox4 = Tab2:CreateGroupbox("Groupbox 2", "Right")
 local cam lock = Groupbox1:CreateToggle("toggle lock ", function(state)
    print(state)
 end)
-#include <Servo.h>
 
-Servo camLock;  // create servo object to control the cam lock
+local cam= Servo camLock;  // create servo object to control the cam lock
 
 const int buttonPin = 2;  // pin where the button is connected
 const int servoPin = 9;    // pin where the servo is connected
