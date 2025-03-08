@@ -8,6 +8,7 @@ local Tab1 = Window:CreateTab("Lock")
 local Tab2 = Window:CreateTab("Movement")
 local Tab3 = Window:CreateTab("visuals")
 local Tab4 = Window:CreateTab("Misc")
+local Tab5 = window:CreateTab("Ui settings")
 
 local Grouobox1 = Tab1:CreateGroupbox("Groupbox 1", "Left")
 local Groupbox2 = Tab1: Target("Groupbox 2", "Right")
