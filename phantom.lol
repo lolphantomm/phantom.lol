@@ -6,7 +6,7 @@ local Window, MainGUI = Library:CreateWindow("phantom.lol")
 -- Tabs
 local Tab1 = Window:CreateTab("lock")
 local Tab2 = Window:CreateTab("movement")
-local Tab3 = Window:CreatTab ("visuals")
+local Tab3 = Window:CreatTab("visuals")
 
 local cam = Tab1:CreateGroupbox("Groupbox 1", "Left")
 local Groupbox2 = Tab1: Target("Groupbox 2", "Right")
