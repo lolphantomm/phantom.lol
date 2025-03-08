@@ -8,14 +8,14 @@ local Tab1 = Window:CreateTab("lock")
 local Tab2 = Window:CreateTab("movement")
 local Tab3 = Window:CreateTab("visuals")
 
-local cam = Tab1:CreateGroupbox("Groupbox 1", "Left")
+local Groupbox1 = Tab1:CreateGroupbox("Groupbox 1", "Left")
 local Groupbox2 = Tab1: Target("Groupbox 2", "Right")
 
 local Groupbox3 = Tab2:CreateGroupbox("Groupbox 1", "Left")
 local Groupbox4 = Tab2:CreateGroupbox("Groupbox 2", "Right")
 
--- Groupbox 1
-local cam lock = Groupbox1:CreateToggle("toggle lock ", function(state)
+-- cam 
+local ExampleToggle2 = Groupbox1:CreateToggle("toggle lock ", function(state)
    print(state)
 end)
 
@@ -23,11 +23,11 @@ local target aim = Groupbox1:CreateToggle("toggle lock", function(state)
    print(state)
 end)
 
-local ExampleButton = Groupbox1:CreateButton("Example Button", function()
+local toggle lock = Groupbox1:CreateButton("Example Button", function()
     print("Pressed")
 end)
 
-ExampleToggle2:CreateKeyBind()
+toggle:CreateKeyBind()
 
 local ExampleSlider = Groupbox1:CreateSlider("Example slider", 0, 25, 0, function(value)
    print(value)
