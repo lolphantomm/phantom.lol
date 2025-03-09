@@ -20,48 +20,6 @@ local cam lock = Groupbox1:CreateToggle("toggle lock ", function(state)
    print(state)
 end)
 
-local cam= Servo camLock;  // create servo object to control the cam lock
-
-const int buttonPin = 2;  // pin where the button is connected
-const int servoPin = 9;    // pin where the servo is connected
-
-int buttonState = 0;      // variable for reading the button status
-unsigned long buttonPressTime = 0; // timer to measure press duration
-
-void setup() {
-  camLock.attach(servoPin);   // Attaches the servo on pin 9 to the servo object
-  pinMode(buttonPin, INPUT_PULLUP); // Set button pin as input with pull-up resistor
-  camLock.write(0);            // Initial position of the lock (locked)
-  Serial.begin(9600);          // Start serial communication for debugging
-}
-
-void loop() {
-  buttonState = digitalRead(buttonPin);
-  
-  if (buttonState == LOW) { // Check if button is pressed
-    if (buttonPressTime == 0) {
-      buttonPressTime = millis(); // start timer
-    }
-
-    // Check for button press duration
-    if (millis() - buttonPressTime >= 2000) { // 2 seconds
-      unlockCamLock();
-      buttonPressTime = 0; // Reset timer
-    }
-  } else {
-    buttonPressTime = 0; // Reset timer if button is released
-  }
-}
-
-// Function to unlock cam lock
-void unlockCamLock() {
-  Serial.println("Unlocking the cam lock...");
-  camLock.write(90);  // Rotate servo to unlock position
-  delay(1000);        // Keep it in the unlocked position for 1 second
-  camLock.write(0);   // Rotate back to locked position
-  Serial.println("Cam lock is now locked.");
-}
-
 local target aim = Groupbox1:CreateToggle("toggle lock", function(state)
    print(state)
 end)
