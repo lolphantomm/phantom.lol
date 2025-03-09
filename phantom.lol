@@ -16,11 +16,11 @@ local Groupbox3 = Tab2:CreateGroupbox("Groupbox 1", "Left")
 local Groupbox4 = Tab2:CreateGroupbox("Groupbox 2", "Right")
 
 -- Groupbox 1
-local cam lock = Groupbox1:CreateToggle("toggle lock ", function(state)
+local ExampleToggle1 = Groupbox1:CreateToggle("camlock", function(state)
    print(state)
 end)
 
-local target aim = Groupbox1:CreateToggle("toggle lock", function(state)
+local ExampleToggle2 = MainGroupbox1:CreateToggle("target aim", function(state)
    print(state)
 end)
 
