@@ -10,7 +10,7 @@ local Tab3 = Window:CreateTab("visuals")
 local Tab4 = Window:CreateTab("Misc")
 
 local Grouobox1 = MainTab1:CreateGroupbox("Cam", "Left")
-local Groupbox2 = Tab1:CreateGroupbox("Target", "Right")
+local Groupbox2 = MainTab1:CreateGroupbox("Target", "Right")
 
 local Groupbox3 = Tab2:CreateGroupbox("Groupbox 1", "Left")
 local Groupbox4 = Tab2:CreateGroupbox("Groupbox 2", "Right")
